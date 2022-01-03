@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+main {
+    min-height: 200vh;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+ }

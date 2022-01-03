@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit()" class="border shadow p-5" >
+    <h1>Add Phone Number</h1>
+    <div *ngIf="showAlert" class="alert alert-danger alert-dismissible fade show" role="alert" role="alert">
+      {{message}}
+    </div>
+    <div *ngIf="showSuccess" class="alert alert-success alert-dismissible fade show" role="alert" role="alert">
+      {{message}}
+    </div>
+    <div class="form-group">
+      <label for="text">Phone Number</label>
+      <input
+        type="tel"
+        name="number"
+        [(ngModel)]="number"
+        id="number"
+        placeholder="Add Phone"
+        class="form-control my-3"
+        pattern="^01[0-2]\d{1,8}$"
+        required
+      />
+    </div>
+    <input type="submit" value="Save Phone" class="btn btn-success btn-block" />
+  </form>
+  
